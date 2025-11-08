@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #83bade, #f8fafc);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+.card-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-header h1 {
+  font-size: 1.6rem;
+  color: #1e3a8a;
+  margin-bottom: 0.3rem;
+}
+
+.prepared-by {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.main-title {
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+  color: #111827;
+}
+
+.subtitle {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.questions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.question-row {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: #f9fafb;
+}
+
+.question-text {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.question-number {
+  color: #6b7280;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.option-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: #374151;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.option-label input {
+  accent-color: #22c55e;
+}
+
+.option-label:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.2);
+}
+
+.error {
+  margin-top: 0.5rem;
+  color: #b91c1c;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.primary-btn,
+.secondary-btn {
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: linear-gradient(to right, #22c55e, #16a34a);
+  color: white;
+  box-shadow: 0 10px 17px rgba(34, 197, 94, 0.35);
+}
+
+.primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+.secondary-btn {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.secondary-btn:hover {
+  background: #d1d5db;
+}
+
+.results {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.results h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.risk-bar-wrapper {
+  margin-bottom: 1rem;
+}
+
+.risk-bar-bg {
+  width: 100%;
+  height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #bbf7d0, #fef9c3, #fecaca);
+  overflow: hidden;
+}
+
+.risk-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.risk-bar-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.risk-score {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.risk-description {
+  margin-top: 0.5rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.dimensions {
+  margin-top: 1.2rem;
+}
+
+.dimensions h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.dimensions ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.advice {
+  margin-top: 1.3rem;
+}
+
+.advice h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.advice p {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.35rem;
+}
+
+.disclaimer {
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 1rem;
+  }
+
+  .question-row {
+    padding: 0.9rem;
+  }
+
+  .options {
+    flex-direction: column;
+  }
+}
